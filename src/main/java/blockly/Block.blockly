@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly formTarget="" resourceType="JAVA" ruleDescription="Block" ruleName="Block" ruleSynchronous="false" ruleTimeout="" ruleType="I">
+  <metadata scale="1" scrollx="357.0000000000007" scrolly="-3.410605131648481e-13" target="Anb:u5+^,0vLkL9QIqn5"/>
+  <block colour="#995ba5" id="Anb:u5+^,0vLkL9QIqn5" origintype="procedures_defreturn" output="false" tooltip="Creates a function with an output." type="procedures_defreturn" x="-350" y="130">
+    <field name="NAME">Execute</field>
+    <comment h="80" pinned="false" w="160">Block</comment>
+    <statement name="STACK">
+      <block colour="#5ba58c" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="C_?C]dAMMHsNvyJW5lWz" origintype="text_print" output="false" tooltip="Print the specified text, number or other value." type="text_print">
+        <value name="TEXT">
+          <shadow colour="#5ba593" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="?%5fPzF+ueef9XLe6oMV" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+            <field name="TEXT">abc</field>
+          </shadow>
+          <block colour="#487f7f" dependencyby="Anb:u5+^,0vLkL9QIqn5" id="(#fkyJ=?5/B3qpILOn|T" multilayer="false" namespace="cronapi.util.Operations.getCurrentUserName" origintype="procedures_callreturn" output="true" returntype="ObjectType.STRING" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3EName:%3C/strong%3E%3Cdiv%3EGet%20current%20user%20name%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescription:%3C/strong%3E%3Cdiv%3EFunction%20that%20get%20current%20user%20name%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3EReturn:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20String%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20target=%22_blank%22%20href=%22https://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%22%3Ehttps://docs.cronapp.io/display/CRON2/cronapi.util.Operations.getCurrentUserName%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.util.Operations.getCurrentUserName}}" return-raw-type="cronapi.Var"/>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</blockly>

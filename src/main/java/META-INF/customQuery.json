@@ -1,0 +1,133 @@
+{
+  "auth": {
+    "customId": "auth",
+    "queryName": "Autenticar",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select o from User o where o.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/auth/"
+  },
+  "roles": {
+    "customId": "roles",
+    "queryName": "Obter Autorização",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Role",
+    "entityFullName": "app.entity.Role",
+    "query": "select o.id from Role o where o.user.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/roles/"
+  },
+  "tenant": {
+    "customId": "tenant",
+    "queryName": "Obter Id de Multi-inquilino",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "User",
+    "entityFullName": "app.entity.User",
+    "query": "select u.company.id from User u where u.login \u003d :login",
+    "queryParamsValues": [
+      {
+        "fieldName": "login",
+        "fieldValue": ""
+      }
+    ],
+    "verbs": {
+      "GET": false,
+      "POST": false,
+      "PUT": false,
+      "DELETE": false
+    },
+    "events": {},
+    "defaultValues": {},
+    "security": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/query/tenant/"
+  },
+  "query432001": {
+    "customId": "listaDeClientesEditadaparaTeste",
+    "queryName": "Lista Clientes Editada Para Teste",
+    "screen": "",
+    "sourceType": "entityFullName",
+    "entitySimpleName": "Cliente",
+    "entityFullName": "app.entity.Cliente",
+    "query": {
+      "isValid": true,
+      "rulesEntity": [
+        {
+          "entity": "Cliente",
+          "alias": "c",
+          "namespace": "app.entity.Cliente"
+        }
+      ],
+      "rulesSelect": [
+        {
+          "func": "get",
+          "field": "c"
+        }
+      ],
+      "rulesGroupBy": [],
+      "rulesHaving": [],
+      "rulesOrderBy": [],
+      "rules": {
+        "condition": "AND",
+        "not": false,
+        "valid": true,
+        "rules": []
+      }
+    },
+    "queryParamsValues": [],
+    "verbs": {
+      "GET": true,
+      "POST": true,
+      "PUT": true,
+      "DELETE": true,
+      "FILTER": true
+    },
+    "events": {},
+    "defaultValues": {},
+    "defaultValuesProperties": {},
+    "security": {},
+    "calcFields": {},
+    "calcFieldsSecurity": {},
+    "calcFieldsProperties": {},
+    "errorHandles": {},
+    "serviceUrl": "api/cronapi/odata/v2/query432001/"
+  }
+}
