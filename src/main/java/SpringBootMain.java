@@ -27,7 +27,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class SpringBootMain extends SpringBootServletInitializer {
 
     static {
-        TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT-3"));
     }
 
 

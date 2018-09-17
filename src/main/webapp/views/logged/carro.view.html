@@ -1,0 +1,225 @@
+<h3>Carro</h3>
+
+<!-- div row para pesquisa -->
+<!--<div class="row">-->
+
+<datasource data-component="crn-datasource" filter="" name="Carro" entity="app.Carro" keys="id" rows-per-page="100" class=""></datasource>
+
+    <div ng-hide="Carro.inserting || Carro.editing" data-component="crn-datasource-filter" id="crn-datasource-filter-general" class="">
+        <div class="form-group">
+            <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+            <input type="text" ng-model="vars.search" cronapp-filter="empresa;" cronapp-filter-operator="" cronapp-filter-caseinsensitive="false" cronapp-filter-autopost="true" crn-datasource="Carro" class="form-control" value="" placeholder="{{'template.crud.search' | translate}}">
+        </div>
+    </div>
+
+<div data-component="crn-button" id="crn-button-564202" class="">
+    <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="Carro.startInserting()" ng-hide="Carro.inserting || Carro.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
+</div>
+<!-- fim div row para pesquisa -->
+<!--</div>-->
+
+<div class="component-holder" data-component="crn-grid" id="crn-grid-Carro">
+    <div crn-datasource="Carro" class="" ng-hide="Carro.editing || Carro.inserting">
+        <table class="table  table-bordered table-hover table-striped">
+            <thead>
+            <tr class="table-header">
+                <th class="">
+                    <div class="">Empresa</div>
+                </th>
+                <th class="">
+                    <div class="">Modelo</div>
+                </th>
+                <th class="">
+                    <div class="">Ano</div>
+                </th>
+                <th class="">
+                    <div class="">Mês</div>
+                </th>
+                <th class="">
+                    <div class="">Disponivel</div>
+                </th>
+                <th class="">
+                    <div class="">Valor</div>
+                </th>
+                <th class="">
+                    <div class="">{{"template.crud.actions" | translate}}</div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="table-content" ng-repeat="rowData in datasource.data">
+                <td class="">
+                    <div class="">
+							{{rowData.empresa  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+							{{rowData.modelo  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+							{{rowData.ano  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+							{{rowData.mes  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+							{{rowData.disponivel  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+							{{rowData.valor  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.startEditing(rowData)"><i class="fa fa-edit"></i></button>
+                        <button class="btn btn-default btn-sm" data-component="crn-button" type="submit" ng-click="datasource.remove(rowData)"><i class="fa fa-times"></i></button>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="table-footer-controls">
+            <button class="btn btn-default btn-block btn-clicked" data-component="crn-button" ng-show="datasource.hasNextPage()" ng-click="datasource.nextPage()">{{"template.crud.load_more" | translate}}...</button>
+        </div>
+    </div>
+</div>
+<div data-component="crn-form" id="crn-form-form-Carro">
+    <div class="form" ng-show="Carro.editing || Carro.inserting">
+        <form crn-datasource="Carro" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.startInserting()"><i class="glyphicon glyphicon-plus-sign"></i></button>
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.startEditing()"><i class="glyphicon glyphicon-edit"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasPrevious()" ng-click="datasource.previous()"><i class="glyphicon glyphicon-chevron-left"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-disabled="!datasource.hasNext()" ng-click="datasource.next()"><i class="glyphicon glyphicon-chevron-right"></i></button>
+                <button class="btn btn-primary" data-component="crn-button" ng-click="datasource.remove()"><i class="glyphicon glyphicon-trash"></i></button>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <button class="btn btn-success" data-component="crn-button" ng-click="datasource.post()"><i class="glyphicon glyphicon-ok"></i></button>
+                <button class="btn btn-danger" data-component="crn-button" ng-click="datasource.cancel()"><i class="glyphicon glyphicon-remove"></i></button>
+            </div>
+            <br/>
+            <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+				
+
+                <div data-component="crn-textinput" id="crn-textinput-empresa" class="">
+                    <div class="form-group">
+                        <label for="textinput-empresa" class="">Empresa</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Carro.active.empresa"
+                                            class="form-control"
+                                            id="textinput-empresa"
+                                            placeholder="Empresa"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+				
+
+                <div data-component="crn-textinput" id="crn-textinput-modelo" class="">
+                    <div class="form-group">
+                        <label for="textinput-modelo" class="">Modelo</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="text"
+                                            ng-model="Carro.active.modelo"
+                                            class="form-control"
+                                            id="textinput-modelo"
+                                            placeholder="Modelo"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+				
+
+                <div data-component="crn-textinput" id="crn-textinput-ano" class="">
+                    <div class="form-group">
+                        <label for="textinput-ano" class="">Ano</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="Carro.active.ano"
+                                            class="form-control"
+                                            id="textinput-ano"
+                                            placeholder="Ano"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+				
+
+                <div data-component="crn-textinput" id="crn-textinput-mes" class="">
+                    <div class="form-group">
+                        <label for="textinput-mes" class="">Mês</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="integer"
+                                            ng-model="Carro.active.mes"
+                                            class="form-control"
+                                            id="textinput-mes"
+                                            placeholder="Mês"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+				
+
+                <div data-component="crn-enterprise-checkbox" id="crn-textinput-disponivel" class="">
+                    <div class="form-group">
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input type="checkbox" class="k-checkbox" ng-model="Carro.active.disponivel" id="textinput-disponivel" placeholder="Disponivel" >
+								<label for="textinput-disponivel" class="k-checkbox-label">Disponivel</label>
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+				
+
+                <div data-component="crn-textinput" id="crn-textinput-valor" class="">
+                    <div class="form-group">
+                        <label for="textinput-valor" class="">Valor</label>
+ <!-- else for if !model.hasCronappFramework() -->
+                                <input
+                                            type="number"
+                                            ng-model="Carro.active.valor"
+                                            class="form-control"
+                                            id="textinput-valor"
+                                            placeholder="Valor"
+                                            mask=""
+                                            mask-placeholder=""
+                                            ng-required="false">
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+                <!-- NtoN  -->
+                <!-- NtoN  end-->
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <!-- OneToN -->
+                <!-- OneToOne  end -->
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<!-- OneToOne modal -->
+<!-- OneToOne modal end-->
