@@ -4,12 +4,13 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <non-jta-data-source>java:comp/env/jdbc/main</non-jta-data-source>
         <class>app.entity.Carro</class>
-        <class>app.entity.Contratos</class>
-        <class>app.entity.Cadastro</class>
         <class>app.entity.Estado</class>
+        <class>app.entity.reliquia</class>
         <class>app.entity.Cliente</class>
+        <class>app.entity.Cadastro</class>
         <class>app.entity.User</class>
         <class>app.entity.Role</class>
+        <class>app.entity.Contratos</class>
         <class>app.entity.Cidade</class>
         <class>app.entity.Particaoacao</class>
         <properties>
